@@ -3955,7 +3955,7 @@
 @font-face {
 	font-family: "codicon";
 	font-display: block;
-	src: url(/assets/codicon-DCmgc-ay.ttf) format("truetype");
+	src: url(/preview/assets/codicon-DCmgc-ay.ttf) format("truetype");
 }
 
 .codicon[class*='codicon-'] {

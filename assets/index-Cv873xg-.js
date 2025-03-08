@@ -1,7 +1,7 @@
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-import { R as Range, e as editor } from "./vendor-B9Za6K_p.js";
+import { R as Range, e as editor } from "./vendor-DvF0p2l6.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -1558,4 +1558,4 @@ class pack_segTree {
     }
   }
 }
-//# sourceMappingURL=index-DgU7bBeF.js.map
+//# sourceMappingURL=index-Cv873xg-.js.map

@@ -18924,7 +18924,7 @@ const SelectAllCommand = registerCommand$3(new MultiCommand({
 }));
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
-  return "/" + dep;
+  return "/preview/" + dep;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -206021,4 +206021,4 @@ export {
   Range$3 as R,
   editor as e
 };
-//# sourceMappingURL=vendor-B9Za6K_p.js.map
+//# sourceMappingURL=vendor-DvF0p2l6.js.map
