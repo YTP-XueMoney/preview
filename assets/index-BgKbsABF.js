@@ -52,6 +52,11 @@ function rotateMatrix(x = 0, y = 0, rad = 0, cx = 0, cy = 0) {
 let inputBuffer = [];
 let currentIndex = 0;
 let isfinish = 0;
+self.MonacoEnvironment = {
+  getWorkerUrl: function(moduleId, label) {
+    return "./assets/worker.js";
+  }
+};
 function highlightLine(lineNumber) {
   if (!window.code_monaco) return;
   if (!window.decorations) {
@@ -272,26 +277,26 @@ let mouse = {
 };
 let updateLoop_count = 0;
 let updateLoop_curLifeRound = 0;
-function updateLoop(self) {
-  if ("updateLoop_myLifeRound" in self) {
-    if (self.updateLoop_myLifeRound < updateLoop_curLifeRound)
-      Reflect.defineProperty(self, "$deleted", {
+function updateLoop(self2) {
+  if ("updateLoop_myLifeRound" in self2) {
+    if (self2.updateLoop_myLifeRound < updateLoop_curLifeRound)
+      Reflect.defineProperty(self2, "$deleted", {
         value: true,
         enumerable: true
       });
   } else {
-    Reflect.defineProperty(self, "updateLoop_myLifeRound", {
+    Reflect.defineProperty(self2, "updateLoop_myLifeRound", {
       value: updateLoop_curLifeRound,
       enumerable: true
     });
   }
-  if ("$deleted" in self && self.$deleted) {
-    if ("delete" in self) self.delete();
+  if ("$deleted" in self2 && self2.$deleted) {
+    if ("delete" in self2) self2.delete();
     return;
   }
   updateLoop_count++;
   setTimeout(() => {
-    self.update();
+    self2.update();
   }, frameT);
 }
 function DelegationHandler(delegaionNames) {
@@ -1558,4 +1563,4 @@ class pack_segTree {
     }
   }
 }
-//# sourceMappingURL=index-Cv873xg-.js.map
+//# sourceMappingURL=index-BgKbsABF.js.map
